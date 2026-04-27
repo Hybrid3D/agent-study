@@ -65,17 +65,31 @@ Once the plan is approved:
 
 ---
 
+## Save Protocol
+
+All learning state persists across sessions as markdown files. **When in doubt, save.** Save BEFORE producing new content — do not defer or batch.
+
+**Concept done** — explicit confirmation ("ok", "got it", "next"), topic shift to a new concept, or follow-up questions stopping → `notes/state.md` → concept note → `notes/learning_plan.md`, then continue.
+
+**Misconception corrected** — log to Misconceptions Corrected in `notes/state.md` immediately.
+
+**Tangential question raised** — log to Open Questions in `notes/state.md` immediately.
+
+**Reference mentioned** — append to `references/references.md` immediately.
+
+**Phase done** — all phase items in `notes/learning_plan.md` checked, OR user confirms → write `notes/phase_NN.md`, update Current Phase in `notes/project_setup.md`, ask before starting next phase.
+
+---
+
 ## Learning Approach
 
 - Do not rush. Only move forward after the user confirms understanding.
 - Adjust depth flexibly depending on the situation — sometimes skim, sometimes go deep.
 - Ask the user questions to check understanding (grounding).
 - Track each concept's state: **understood** (confidently grasped), **to revisit** (hesitant or partially understood), or **not yet covered**. Skip understood concepts; build on top of them.
-- Detect hesitation, vague answers, or repeated questions about the same concept — record those under "to revisit" rather than "understood".
-- When the user is corrected on a wrong mental model, record both the prior belief and the correct understanding under Misconceptions Corrected, so the same wrong framing doesn't reappear.
-- When the user asks a tangential question that doesn't fit the current flow, park it under Open Questions and bring it back when the relevant topic comes up.
+- Detect hesitation, vague answers, or repeated questions about the same concept — classify those as "to revisit" rather than "understood".
+- When the user asks a tangential question that doesn't fit the current flow, bring it back when the relevant topic comes up.
 - At the start of a new session or phase, surface "to revisit" concepts and any Open Questions that have become relevant before continuing.
-- Update `notes/state.md` immediately when state changes during a session. At phase completion, write `notes/phase_01.md` (see Phase Snapshot format below) as a permanent record, then continue updating `notes/state.md` for the next phase.
 
 ### Document / Paper-driven Learning
 
@@ -88,7 +102,7 @@ When the user provides a document or paper:
 
 ## State Tracking
 
-All learning state is stored in `notes/state.md`. Update it immediately when state changes during a session — do not wait until the end.
+All learning state is stored in `notes/state.md`. See **Save Protocol** above for when to save.
 
 ### notes/state.md format
 
@@ -163,12 +177,8 @@ Why this phase matters for what comes next — how it connects to the next phase
 
 ## Progress Tracking
 
-- Maintain the learning plan as a checklist in `notes/learning_plan.md`.
-- Mark completed items with `[x]` and link the corresponding note file.
+- Maintain the learning plan as a checklist in `notes/learning_plan.md`. Mark completed items with `[x]` and link the corresponding note file.
 - Work through one phase at a time. Do not move to the next phase until the user confirms the current phase is complete.
-- When a phase is fully completed, summarize what was covered, then ask the user before moving on.
-- Before moving to the next phase, write the phase snapshot (`notes/phase_01.md` etc.) using the Phase Snapshot format defined in State Tracking.
-- Update the current phase in `notes/project_setup.md` whenever a phase changes.
 
 ---
 
